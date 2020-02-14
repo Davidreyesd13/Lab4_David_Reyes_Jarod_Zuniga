@@ -72,8 +72,15 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 while (sbtr == true) {
                                     switch (opc) {
                                         case 1:
-                                            
-                                            
+                                            System.out.println("Ingrese el nombre del jugador");
+                                            String nombre =sc.nextLine();
+                                            nombre =sc.nextLine();
+                                            System.out.println("Ingrese el peso del jugador");
+                                            double pe=sc.nextDouble();
+                                            System.out.println("Ingrese la musculatura");
+                                            double mu=sc.nextDouble();
+                                            System.out.println("Ingrese la los reflejos");
+                                            double ref=sc.nextDouble();
                                             
                                             break;
                                         case 3:
@@ -103,3 +110,5 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
             }
 
         }
+    }
+}
