@@ -12,6 +12,7 @@ public class Jugadores {
     }
 
     public Jugadores(String nombre, double peso, double musculatura, double reflejos, String pos) {
+        this.nombre = nombre;
         this.peso = peso;
         this.musculatura = musculatura;
         this.reflejos = reflejos;
