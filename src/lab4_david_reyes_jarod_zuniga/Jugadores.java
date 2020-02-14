@@ -1,6 +1,6 @@
 package lab4_david_reyes_jarod_zuniga;
 
-public class Jugadores {
+public abstract class Jugadores {
 
     private String nombre;
     private double peso;
@@ -44,7 +44,9 @@ public class Jugadores {
     public void setReflejos(double reflejos) {
         this.reflejos = reflejos;
     }
-
+    public abstract double peso();
+    public abstract double Musculatura();
+    public abstract double Reflejos();
     public String getPos() {
         return pos;
     }

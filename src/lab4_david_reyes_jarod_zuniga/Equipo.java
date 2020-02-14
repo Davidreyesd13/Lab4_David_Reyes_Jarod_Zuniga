@@ -2,7 +2,7 @@ package lab4_david_reyes_jarod_zuniga;
 
 import java.util.ArrayList;
 
-public abstract class Equipo {
+public class Equipo {
     private String casa;
     private int cpg;
     private int cpp;
