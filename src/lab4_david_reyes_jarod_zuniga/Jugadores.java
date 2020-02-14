@@ -19,6 +19,7 @@ public class Jugadores {
         this.reflejos = reflejos;
         this.pos = pos;
         this.cap = cap;
+        
     }
     
     public String getCap() {
