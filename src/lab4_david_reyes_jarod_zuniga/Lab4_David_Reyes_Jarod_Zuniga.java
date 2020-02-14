@@ -6,13 +6,12 @@ import java.util.Scanner;
 
 public class Lab4_David_Reyes_Jarod_Zuniga {
 
-    ArrayList equipo = new ArrayList();
-    ArrayList jugadores = new ArrayList();
-
     static Scanner sc = new Scanner(System.in);
     static Random rn = new Random();
 
     public static void main(String[] args) {
+        ArrayList equipo = new ArrayList();
+        ArrayList jugadores = new ArrayList();
         System.out.println("Bienvenido al programa juegos de Hogwarts");
         System.out.println("");
         System.out.println("|-------------------------*MENU*--------------------------|");
@@ -73,67 +72,103 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                     switch (opc) {
                                         case 1:
                                             System.out.println("1.Buscadores\n2.Golpeador\n3.Cazadores\n4.Guardian ");
-                                            opc=sc.nextInt();
-                                            String pos="";
-                                            sbtr=true;
-                                            while (sbtr==true) {
-                                            switch (opc) {
-                                                case 1:
-                                                    System.out.println("Ingrese el nombre del jugador");
-                                                    String no=sc.nextLine();
-                                                    no=sc.nextLine();
-                                                    System.out.println("Ingrese el peso de los jugadores");
-                                                    double pe=sc.nextDouble();
-                                                    System.out.println("Ingrese la musculatura de los jugadores");
-                                                    double mu=sc.nextDouble();
-                                                    System.out.println("Ingrese los reflejos de los jugadores");
-                                                    double ref=sc.nextDouble();
-                                                    pos="Golpeadores";
-                                                    break;
-                                                case 2:
-                                                    System.out.println("Ingrese el nombre del jugador");
-                                                    no=sc.nextLine();
-                                                    no=sc.nextLine();
-                                                    System.out.println("Ingrese el peso de los jugadores");
-                                                    pe=sc.nextDouble();
-                                                    System.out.println("Ingrese la musculatura de los jugadores");
-                                                    mu=sc.nextDouble();
-                                                    System.out.println("Ingrese los reflejos de los jugadores");
-                                                    ref=sc.nextDouble();
-                                                    pos="Cazadores";
-                                                    sbtr=false;
-                                                    break;
-                                                case 3:
-                                                    System.out.println("Ingrese el nombre del jugador");
-                                                    no=sc.nextLine();
-                                                    no=sc.nextLine();
-                                                    System.out.println("Ingrese el peso de los jugadores");
-                                                    pe=sc.nextDouble();
-                                                    System.out.println("Ingrese la musculatura de los jugadores");
-                                                    mu=sc.nextDouble();
-                                                    System.out.println("Ingrese los reflejos de los jugadores");
-                                                    ref=sc.nextDouble();
-                                                    pos="Guardian";
-                                                    sbtr=false;
-                                                    break;
-                                                case 4:
-                                                    System.out.println("Ingrese el nombre del jugador");
-                                                    no=sc.nextLine();
-                                                    no=sc.nextLine();
-                                                    System.out.println("Ingrese el peso de los jugadores");
-                                                    pe=sc.nextDouble();
-                                                    System.out.println("Ingrese la musculatura de los jugadores");
-                                                    mu=sc.nextDouble();
-                                                    System.out.println("Ingrese los reflejos de los jugadores");
-                                                    ref=sc.nextDouble();
-                                                    pos="Buscadores";
-                                                    sbtr=false;
-                                                    break;
-                                                default:
-                                                    System.out.println("opcion ingresada es incorrecta");
+                                            opc = sc.nextInt();
+                                            String pos = "",
+                                             cap = "";
+                                            int c = 0,
+                                             g,
+                                             go,
+                                             ca,
+                                             b;
+                                            sbtr = true;
+                                            while (sbtr == true) {
+                                                switch (opc) {
+                                                    case 1:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        String no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        double pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        double mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        double ref = sc.nextDouble();
+                                                        pos = "Golpeadores";
+                                                        System.out.println("es capitan? s/n");
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 2:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Cazadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Guardian";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 4:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Buscadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("opcion ingresada es incorrecta");
+                                                }
                                             }
-                                            }
-                                            jugadores.add(new Jugadores(no,pe,mu,ref,pos,));
+
                                             break;
                                         case 3:
                                             break;
