@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Slytherin extends Equipo {
 
-    @Override
+
     public ArrayList equipos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
