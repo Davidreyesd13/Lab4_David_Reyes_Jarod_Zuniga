@@ -1,5 +1,5 @@
 package lab4_david_reyes_jarod_zuniga;
 
-public class Buscador {
+public class Buscador extends Jugadores{
     
 }

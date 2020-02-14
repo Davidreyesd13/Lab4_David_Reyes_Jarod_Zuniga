@@ -20,7 +20,7 @@ public class Jugadores {
         this.pos = pos;
         this.cap = cap;
     }
-
+    
     public String getCap() {
         return cap;
     }

@@ -61,12 +61,9 @@ public abstract class Equipo {
         super();
     }
 
-    public abstract int cpg();
-    public abstract int cpp();
-
     @Override
     public String toString() {
-        return "Equipo{" + "casa=" + casa + ", cpg=" + cpg + ", cpp=" + cpp + ", lista=" + lista + ", capitan=" + capitan + '}';
+        return "Equipo{" + "casa=" + casa + ", Cantidad de Partidos Ganados=" + cpg + ", Cantidad de partidos perdidos=" + cpp + ", lista=" + lista + ", capitan=" + capitan + '}';
     }
     
     
