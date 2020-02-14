@@ -7,16 +7,18 @@ public class Jugadores {
     private double musculatura;
     private double reflejos;
     private String pos;
+    private String capitan;
 
     public Jugadores() {
     }
 
-    public Jugadores(String nombre,double peso, double musculatura, double reflejos, String pos) {
+    public Jugadores(String nombre,double peso, double musculatura, double reflejos, String pos,String capitan) {
         this.nombre = nombre;
         this.peso = peso;
         this.musculatura = musculatura;
         this.reflejos = reflejos;
         this.pos = pos;
+        this.capitan = capitan;
     }
 
     public double getPeso() {
