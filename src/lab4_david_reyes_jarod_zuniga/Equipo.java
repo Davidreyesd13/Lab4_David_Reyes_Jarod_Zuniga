@@ -7,14 +7,12 @@ public abstract class Equipo {
     private int cpg;
     private int cpp;
     ArrayList<Jugadores> lista;
-    private String capitan;
 
-    public Equipo(String casa, int cpg, int cpp, ArrayList<Jugadores> lista, String capitan) {
+    public Equipo(String casa, int cpg, int cpp, ArrayList<Jugadores> lista) {
         this.casa = casa;
         this.cpg = cpg;
         this.cpp = cpp;
         this.lista = lista;
-        this.capitan = capitan;
         
     }
 
