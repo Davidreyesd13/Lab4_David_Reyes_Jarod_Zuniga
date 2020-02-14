@@ -2,7 +2,7 @@ package lab4_david_reyes_jarod_zuniga;
 
 import java.util.ArrayList;
 
-public class Slytherin extends Hogwarts {
+public class Ravenclaw extends Hogwarts {
 
     @Override
     public ArrayList equipos() {
@@ -18,5 +18,6 @@ public class Slytherin extends Hogwarts {
     public int cpp() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     
 }
