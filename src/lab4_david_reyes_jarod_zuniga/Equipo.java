@@ -63,6 +63,11 @@ public abstract class Equipo {
 
     public abstract int cpg();
     public abstract int cpp();
+
+    @Override
+    public String toString() {
+        return "Equipo{" + "casa=" + casa + ", cpg=" + cpg + ", cpp=" + cpp + ", lista=" + lista + ", capitan=" + capitan + '}';
+    }
     
     
 }
