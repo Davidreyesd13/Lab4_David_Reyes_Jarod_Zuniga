@@ -2,7 +2,7 @@ package lab4_david_reyes_jarod_zuniga;
 
 import java.util.ArrayList;
 
-public class Slytherin extends Hogwarts {
+public class Slytherin extends Equipo {
 
     @Override
     public ArrayList equipos() {

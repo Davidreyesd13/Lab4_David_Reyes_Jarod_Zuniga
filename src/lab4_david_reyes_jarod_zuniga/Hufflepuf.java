@@ -2,11 +2,10 @@ package lab4_david_reyes_jarod_zuniga;
 
 import java.util.ArrayList;
 
-public class Hufflepuf extends Hogwarts{
+public class Hufflepuf extends Equipo{
 
-    @Override
-    public ArrayList equipos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Hufflepuf(String casa, int cpg, int cpp, ArrayList<Jugadores> lista, String capitan) {
+        super(casa, cpg, cpp, lista, capitan);
     }
 
     @Override
