@@ -1,12 +1,15 @@
 package lab4_david_reyes_jarod_zuniga;
 
+
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Lab4_David_Reyes_Jarod_Zuniga {
 
-   
-    
+public class Lab4_David_Reyes_Jarod_Zuniga {
+    ArrayList equipo = new ArrayList();
+    ArrayList jugadores = new ArrayList();
+
     
     static Scanner sc = new Scanner(System.in);
     static Random rn = new Random();
@@ -89,8 +92,11 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
             default:
                 throw new AssertionError();
         }
+
         }
-        
+    
+
     }
+
 
 }

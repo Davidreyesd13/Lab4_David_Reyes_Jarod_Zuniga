@@ -4,7 +4,7 @@ public class Excepcion extends Exception {
 
     @Override
     public String toString() {
-        return "Excepcion{" +"Ya existen equipos ahi"+ '}';
+        return "Excepcion{" +"Ya hay un equipo existente"+ '}';
     }
     
     
