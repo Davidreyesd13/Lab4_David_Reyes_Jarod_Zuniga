@@ -7,16 +7,26 @@ public class Jugadores {
     private double musculatura;
     private double reflejos;
     private String pos;
+    private String cap;
 
     public Jugadores() {
     }
 
-    public Jugadores(String nombre, double peso, double musculatura, double reflejos, String pos) {
+    public Jugadores(String nombre, double peso, double musculatura, double reflejos, String pos,String cap) {
         this.nombre = nombre;
         this.peso = peso;
         this.musculatura = musculatura;
         this.reflejos = reflejos;
         this.pos = pos;
+        this.cap = cap;
+    }
+
+    public String getCap() {
+        return cap;
+    }
+
+    public void setCap(String cap) {
+        this.cap = cap;
     }
 
     public String getNombre() {
