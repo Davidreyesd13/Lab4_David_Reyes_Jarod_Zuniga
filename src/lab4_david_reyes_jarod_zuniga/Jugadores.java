@@ -1,19 +1,29 @@
 package lab4_david_reyes_jarod_zuniga;
 
 public class Jugadores {
-private double peso;
-private double musculatura;
-private double reflejos;
-private String pos;
+
+    private String nombre;
+    private double peso;
+    private double musculatura;
+    private double reflejos;
+    private String pos;
 
     public Jugadores() {
     }
 
-    public Jugadores(double peso, double musculatura, double reflejos, String pos) {
+    public Jugadores(String nombre, double peso, double musculatura, double reflejos, String pos) {
         this.peso = peso;
         this.musculatura = musculatura;
         this.reflejos = reflejos;
         this.pos = pos;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public double getPeso() {
