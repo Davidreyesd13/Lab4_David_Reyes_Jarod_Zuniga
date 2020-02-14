@@ -40,14 +40,6 @@ public abstract class Equipo {
         this.lista = lista;
     }
 
-    public String getCapitan() {
-        return capitan;
-    }
-
-    public void setCapitan(String capitan) {
-        this.capitan = capitan;
-    }
-
     public String getCasa() {
         return casa;
     }
@@ -61,7 +53,7 @@ public abstract class Equipo {
 
     @Override
     public String toString() {
-        return "Equipo{" + "casa=" + casa + ", Cantidad de Partidos Ganados=" + cpg + ", Cantidad de partidos perdidos=" + cpp + ", lista=" + lista + ", capitan=" + capitan + '}';
+        return "Equipo{" + "casa=" + casa + ", Cantidad de Partidos Ganados=" + cpg + ", Cantidad de partidos perdidos=" + cpp + ", lista=" + lista + '}';
     }
     
     
