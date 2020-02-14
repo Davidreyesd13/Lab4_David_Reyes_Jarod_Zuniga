@@ -42,35 +42,6 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                     switch (opc) {
                                         case 1:
                                             casa = "Gryffindor";
-                                            tr = false;
-                                            break;
-                                        case 2:
-                                            casa = "Slytherin";
-                                            tr = false;
-                                            break;
-                                        case 3:
-                                            casa = "Ravenclaw";
-                                            tr = false;
-                                            break;
-                                        case 4:
-                                            casa = "Hufflepuff";
-                                            tr = false;
-                                            break;
-                                        default:
-                                            System.out.println("");
-                                    }
-                                }
-                                break;
-                            case 2:
-                                System.out.println("1. agregar jugador");
-                                System.out.println("2. modificar jugador");
-                                System.out.println("3. eliminar jugador");
-                                System.out.println("4. listar jugador");
-                                System.out.println("5. cancelar");
-                                opc = sc.nextInt();
-                                while (sbtr == true) {
-                                    switch (opc) {
-                                        case 1:
                                             System.out.println("1.Buscadores\n2.Golpeador\n3.Cazadores\n4.Guardian ");
                                             opc = sc.nextInt();
                                             String pos = "",
@@ -101,7 +72,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("Ya existe un capitan");
                                                         }
-                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        jugadores.add(new Buscador(no, pe, mu, ref, pos, cap));
                                                         sbtr = false;
                                                         break;
                                                     case 2:
@@ -141,7 +112,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("Ya existe un capitan");
                                                         }
-                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
                                                         sbtr = false;
                                                         break;
                                                     case 4:
@@ -161,13 +132,337 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("Ya existe un capitan");
                                                         }
-                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        jugadores.add(new Guardian(no, pe, mu, ref, pos, cap));
                                                         sbtr = false;
                                                         break;
                                                     default:
                                                         System.out.println("opcion ingresada es incorrecta");
                                                 }
                                             }
+                                            tr = false;
+                                            break;
+                                        case 2:
+                                            casa = "Slytherin";
+                                            System.out.println("1.Buscadores\n2.Golpeador\n3.Cazadores\n4.Guardian ");
+                                            opc = sc.nextInt();
+                                            pos = "";
+                                            cap = "";
+                                            c = 0;
+                                            g = 0;
+                                            go = 0;
+                                            ca = 0;
+                                            b = 0;
+                                            sbtr = true;
+                                            while (sbtr == true) {
+                                                switch (opc) {
+                                                    case 1:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        String no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        double pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        double mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        double ref = sc.nextDouble();
+                                                        pos = "Golpeadores";
+                                                        System.out.println("es capitan? s/n");
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Buscador(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 2:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Cazadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Guardian";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 4:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Buscadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Guardian(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("opcion ingresada es incorrecta");
+                                                }
+                                            }
+                                            tr = false;
+                                            break;
+                                        case 3:
+                                            casa = "Ravenclaw";
+                                            System.out.println("1.Buscadores\n2.Golpeador\n3.Cazadores\n4.Guardian ");
+                                            opc = sc.nextInt();
+                                            pos = "";
+                                            cap = "";
+                                            c = 0;
+                                            g = 0;
+                                            go = 0;
+                                            ca = 0;
+                                            b = 0;
+                                            sbtr = true;
+                                            while (sbtr == true) {
+                                                switch (opc) {
+                                                    case 1:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        String no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        double pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        double mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        double ref = sc.nextDouble();
+                                                        pos = "Golpeadores";
+                                                        System.out.println("es capitan? s/n");
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Buscador(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 2:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Cazadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Guardian";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 4:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Buscadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Guardian(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("opcion ingresada es incorrecta");
+                                                }
+                                            }
+                                            tr = false;
+                                            break;
+                                        case 4:
+                                            casa = "Hufflepuff";
+                                            System.out.println("1.Buscadores\n2.Golpeador\n3.Cazadores\n4.Guardian ");
+                                            opc = sc.nextInt();
+                                            pos = "";
+                                            cap = "";
+                                            c = 0;
+                                            g = 0;
+                                            go = 0;
+                                            ca = 0;
+                                            b = 0;
+                                            sbtr = true;
+                                            while (sbtr == true) {
+                                                switch (opc) {
+                                                    case 1:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        String no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        double pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        double mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        double ref = sc.nextDouble();
+                                                        pos = "Golpeadores";
+                                                        
+                                                        if (c != 1) {
+                                                            
+                                                            System.out.println("desea que sea capitan? s/n");
+                                                            
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Buscador(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 2:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Cazadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Golpeadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 3:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Guardian";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    case 4:
+                                                        System.out.println("Ingrese el nombre del jugador");
+                                                        no = sc.nextLine();
+                                                        no = sc.nextLine();
+                                                        System.out.println("Ingrese el peso de los jugadores");
+                                                        pe = sc.nextDouble();
+                                                        System.out.println("Ingrese la musculatura de los jugadores");
+                                                        mu = sc.nextDouble();
+                                                        System.out.println("Ingrese los reflejos de los jugadores");
+                                                        ref = sc.nextDouble();
+                                                        pos = "Buscadores";
+                                                        if (c != 1) {
+                                                            cap = "Capitan";
+                                                            c = 1;
+                                                        } else {
+                                                            System.out.println("Ya existe un capitan");
+                                                        }
+                                                        jugadores.add(new Guardian(no, pe, mu, ref, pos, cap));
+                                                        sbtr = false;
+                                                        break;
+                                                    default:
+                                                        System.out.println("opcion ingresada es incorrecta");
+                                                }
+                                            }
+                                            tr = false;
+                                            break;
+                                        default:
+                                            System.out.println("");
+                                    }
+                                }
+                                equipo.add(new EquipoImpl(casa,0, 0, jugadores));
+                                break;
+                            case 2:
+                                System.out.println("1. agregar jugador");
+                                System.out.println("2. modificar jugador");
+                                System.out.println("3. eliminar jugador");
+                                System.out.println("4. listar jugador");
+                                System.out.println("5. cancelar");
+                                opc = sc.nextInt();
+                                while (sbtr == true) {
+                                    switch (opc) {
+                                        case 1:
 
                                             break;
                                         case 3:
@@ -195,6 +490,13 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     }
 
             }
+        }
+    }
+
+    private static class EquipoImpl extends Equipo {
+
+        public EquipoImpl(String casa, int i, int i0, ArrayList jugadores) {
+            super(casa, i, i0, jugadores);
         }
     }
 }
