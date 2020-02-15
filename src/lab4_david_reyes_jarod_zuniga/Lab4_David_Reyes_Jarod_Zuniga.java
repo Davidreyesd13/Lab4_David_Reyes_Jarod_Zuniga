@@ -11,21 +11,21 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
 
     public static void main(String[] args) {
         int opc = 0;
-        //equipo 1
+        
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList(6);
-                ArrayList jugadores2 = new ArrayList(6);
+        ArrayList jugadores2 = new ArrayList(6);
         ArrayList jugadores3 = new ArrayList(6);
         ArrayList jugadores4 = new ArrayList(6);
-
-//        jugadores.add(new Buscador("Jarod", 150, 100, 12, "Buscador", "Si"));
-//        jugadores.add(new Cazadores("David", 130, 80, 12, "Cazador", "no"));
-//        jugadores.add(new Golpeadores("Juan", 120, 95, 12, "Golpeador", "no"));
-//        jugadores.add(new Cazadores("Jose", 180, 99, 12, "Cazador", "no"));
-//        jugadores.add(new Golpeadores("Diego", 140, 97, 12, "Golpeador", "no"));
-//        jugadores.add(new Cazadores("Andrea", 110, 89, 12, "Cazador", "no"));
-//        jugadores.add(new Guardian("Josue", 170, 88, 12, "Guardian", "no"));
-//        equipo.add(new Equipo("Gryffindor", 0, 0, jugadores));
+        //equipo 1
+        jugadores.add(new Buscador("Jarod", 150, 100, 12, "Buscador", "Si"));
+        jugadores.add(new Cazadores("David", 130, 80, 12, "Cazador", "no"));
+        jugadores.add(new Golpeadores("Juan", 120, 95, 12, "Golpeador", "no"));
+        jugadores.add(new Cazadores("Jose", 180, 99, 12, "Cazador", "no"));
+        jugadores.add(new Golpeadores("Diego", 140, 97, 12, "Golpeador", "no"));
+        jugadores.add(new Cazadores("Andrea", 110, 89, 12, "Cazador", "no"));
+        jugadores.add(new Guardian("Josue", 170, 88, 12, "Guardian", "no"));
+        equipo.add(new Equipo("Gryffindor", 0, 0, jugadores));
 //        //equipo 2
 //        jugadores2.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
 //        jugadores2.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
@@ -721,7 +721,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
 
                     }
                     sbtr = true;
-                    
+
                     break;
                 case 2:
                     System.out.println("1. modificar jugador");
