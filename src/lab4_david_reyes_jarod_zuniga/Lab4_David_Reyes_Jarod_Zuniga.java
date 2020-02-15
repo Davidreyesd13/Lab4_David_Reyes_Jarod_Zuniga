@@ -839,8 +839,16 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
         }
     }
 
-    public void modojuego(int mod) {
+    public void modojuegobus(int mod) {
 
     }
-
+    public void modjcaza(int mod){
+        
+    }
+    public void modjgolp(int mod){
+        
+    }
+    public void modjguard(int mod){
+        
+    }
 }
