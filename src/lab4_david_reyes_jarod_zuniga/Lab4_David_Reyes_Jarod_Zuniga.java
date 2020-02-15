@@ -10,6 +10,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
     static Random rn = new Random();
 
     public static void main(String[] args) {
+        int opc=0;
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList();
         System.out.println("Bienvenido al programa juegos de Hogwarts");
@@ -19,7 +20,11 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                 + "\n|2.CRUD Jugadores                                         |"
                 + "\n|3.Simulación del Juego                                   |");
         System.out.println("|---------------------------------------------------------|");
-        int opc = sc.nextInt();
+        try{
+         opc= sc.nextInt();
+        }catch (Exception e){
+            System.out.println("Error capa ocho valor nulo");
+        }
         boolean tr = true, sbtr = true;
         while (tr == true) {
             switch (opc) {
@@ -109,7 +114,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's'&& resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -137,21 +142,17 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             System.out.println("Ingrese los reflejos de los jugadores");
                                                             ref = sc.nextDouble();
                                                             pos = "Guardian";
-                                                            boolean z=true;
-                                                            while(z==true){
-                                                            try{
-                                                            if(c != 1) {
+                                                            if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                if (resp == 's' && resp == 'S') {
+                                                                while (resp != 's' && resp != 'n') {
+                                                                    System.out.println("desea que sea capitan? s/n");
+                                                                    resp = sc.next().charAt(0);
+                                                                }
+                                                                if (resp == 's' || resp == 'S') {
                                                                     cap = "Capitan";
                                                                     c = 1;
                                                                 }
-                                                                z=false;
-                                                            }}catch(Exception e){
-                                                                System.out.println("Error capa ocho valor ingresado nulo");
-                                                                z=false;
-                                                            }
                                                             }
                                                             jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
                                                             sbtr = false;
@@ -713,7 +714,8 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     break;
 
                 default:
-                    throw new AssertionError();
+                    tr=false;
+                    System.out.println("Error");
             }
             
         }
