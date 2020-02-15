@@ -11,17 +11,11 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
 
     public static void main(String[] args) {
         int opc = 0;
-        
+
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList(6);
-        ArrayList jugadores2 = new ArrayList(6);
-        ArrayList jugadores3 = new ArrayList(6);
-        ArrayList jugadores4 = new ArrayList(6);
 
         //equipo 1
-
-
-        
         jugadores.add(new Buscador("Jarod", 150, 100, 12, "Buscador", "Si"));
         jugadores.add(new Cazadores("David", 130, 80, 12, "Cazador", "no"));
         jugadores.add(new Golpeadores("Juan", 120, 95, 12, "Golpeador", "no"));
@@ -31,58 +25,45 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
         jugadores.add(new Guardian("Josue", 170, 88, 12, "Guardian", "no"));
         equipo.add(new Equipo("Gryffindor", 0, 0, jugadores));
 
-//        //equipo 2
-//        jugadores2.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
-//        jugadores2.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
-//        jugadores2.add(new Golpeadores("carlos", 120, 95, 12, "Golpeador", "no"));
-//        jugadores2.add(new Cazadores("miguel", 180, 99, 12, "Cazador", "no"));
-//        jugadores2.add(new Golpeadores("rambo", 140, 97, 12, "Golpeador", "no"));
-//        jugadores2.add(new Cazadores("chuck norris", 110, 89, 12, "Cazador", "no"));
-//        jugadores2.add(new Guardian("tu crush", 170, 88, 12, "Guardian", "no"));
-//        equipo.add(new Equipo("Slytherin", 0, 0, jugadores2));
-
         //equipo 2
-        jugadores2.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
-        jugadores2.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
-        jugadores2.add(new Golpeadores("carlos", 120, 95, 12, "Golpeador", "no"));
-        jugadores2.add(new Cazadores("miguel", 180, 99, 12, "Cazador", "no"));
-        jugadores2.add(new Golpeadores("rambo", 140, 97, 12, "Golpeador", "no"));
-        jugadores2.add(new Cazadores("chuck norris", 110, 89, 12, "Cazador", "no"));
-        jugadores2.add(new Guardian("tu crush", 170, 88, 12, "Guardian", "no"));
-        equipo.add(new Equipo("Slytherin", 0, 0, jugadores2));
+        jugadores.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
+        jugadores.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
+        jugadores.add(new Golpeadores("carlos", 120, 95, 12, "Golpeador", "no"));
+        jugadores.add(new Cazadores("miguel", 180, 99, 12, "Cazador", "no"));
+        jugadores.add(new Golpeadores("rambo", 140, 97, 12, "Golpeador", "no"));
+        jugadores.add(new Cazadores("chuck norris", 110, 89, 12, "Cazador", "no"));
+        jugadores.add(new Guardian("tu crush", 170, 88, 12, "Guardian", "no"));
+        equipo.add(new Equipo("Slytherin", 0, 0, jugadores));
 
-
-        
         System.out.println("Bienvenido al programa juegos de Hogwarts");
         System.out.println("");
         boolean tr = true, sbtr = true;
         while (tr == true) {
-        System.out.println("|-------------------------*MENU*--------------------------|");
-        System.out.println("|1.CRUD Equipo                                            |"
-                + "\n|2.CRUD Jugadores                                         |"
-                + "\n|3.Simulación del Juego                                   |");
-        System.out.println("|---------------------------------------------------------|");
-        try {
-            opc = sc.nextInt();
-        } catch (Exception e) {
-            System.out.println("Error capa ocho valor nulo");
-        }
-        
+            System.out.println("|-------------------------*MENU*--------------------------|");
+            System.out.println("|1.CRUD Equipo                                            |"
+                    + "\n|2.CRUD Jugadores                                         |"
+                    + "\n|3.Simulación del Juego                                   |");
+            System.out.println("|---------------------------------------------------------|");
+            try {
+                opc = sc.nextInt();
+            } catch (Exception e) {
+                System.out.println("Error capa ocho valor nulo");
+            }
+
             switch (opc) {
                 case 1:
                     while (sbtr == true) {
-                    System.out.println("1. agregar equipos");
-                    System.out.println("2. modificar equipos");
-                    System.out.println("3. eliminar equipos");
-                    System.out.println("4. listar equipos");
-                    System.out.println("5. cancelar");
-                    try {
-                        opc = sc.nextInt();
-                    } catch (Exception e) {
-                        System.out.println("Error el valor es nulo");
-                    }
+                        System.out.println("1. agregar equipos");
+                        System.out.println("2. modificar equipos");
+                        System.out.println("3. eliminar equipos");
+                        System.out.println("4. listar equipos");
+                        System.out.println("5. cancelar");
+                        try {
+                            opc = sc.nextInt();
+                        } catch (Exception e) {
+                            System.out.println("Error el valor es nulo");
+                        }
 
-                    
                         switch (opc) {
                             case 1:
                                 char resp;
@@ -731,7 +712,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                     System.out.println(equipo.get(i));
                                 }
                                 sbtr = false;
-                                tr=true;
+                                tr = true;
                                 break;
                             default:
                                 System.out.println("Opcion no valida");
@@ -741,9 +722,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     }
                     sbtr = true;
 
-
-
-                    tr=true;
+                    tr = true;
 
                     break;
                 case 2:
@@ -763,17 +742,13 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 break;
                             case 3:
                                 for (int i = 0; i < jugadores.size(); i++) {
-                                    System.out.print(jugadores.get(i)+"\n");
+                                    if (i < jugadores.size() / 2) {
+                                        System.out.print(jugadores.get(i) + "\n");
+                                    }else{
+                                        System.out.println(jugadores.get(i));
+                                    }
                                 }
-                                for (int i = 0; i < jugadores2.size(); i++) {
-                                    System.out.print(jugadores2.get(i)+"\n");
-                                }
-                                for (int i = 0; i < jugadores3.size(); i++) {
-                                    System.out.print(jugadores3.get(i)+"\n");
-                                }
-                                for (int i = 0; i < jugadores4.size(); i++) {
-                                    System.out.print(jugadores4.get(i)+"\n");
-                                }
+
                                 sbtr = false;
                                 break;
                             case 4:
@@ -788,14 +763,84 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     }
                     break;
                 case 3:
-                    
+                    boolean flag = true;
+                    while (flag) {
+                        System.out.println("Jugadores del equipo 1");
+                        if (!jugadores.isEmpty()) {
+                            for (int i = 0; i < jugadores.size(); i++) {
+                                
+                                System.out.println((i + 1) + ". " + jugadores.get(i));
+                            }
+                        } 
+                        System.out.println("Ingrese el numero de jugador");
+                        int pos = sc.nextInt() - 1;
+                        if (jugadores.get(pos) instanceof Buscador) {
+                            System.out.println("1. hacer jugada\n2. hacer trampa");
+                            int opcion = sc.nextInt();
+                            switch (opcion) {
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                            }
+                        }else if (jugadores.get(pos)instanceof Cazadores) {
+                           System.out.println("1. hacer jugada\n2. hacer trampa");
+                            int opcion = sc.nextInt();
+                            switch (opcion) {
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                            } 
+                        }else if(jugadores.get(pos)instanceof Golpeadores){
+                            System.out.println("1. hacer jugada\n2. hacer trampa");
+                            int opcion = sc.nextInt();
+                            switch (opcion) {
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                            } 
+                            
+                        }else if(jugadores.get(pos)instanceof Guardian){
+                            System.out.println("1. hacer jugada\n2. hacer trampa");
+                            int opcion = sc.nextInt();
+                            switch (opcion) {
+                                case 1:
+                                    
+                                    break;
+                                case 2:
+                                    
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                            } 
+                        }
+ 
+                    }
                     break;
 
                 default:
                     tr = false;
             }
-            tr=true;
+            tr = true;
         }
+    }
+
+    public void modojuego(int mod) {
+
     }
 
 }
