@@ -13,26 +13,29 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
         int opc = 0;
         //equipo 1
         ArrayList equipo = new ArrayList();
-        ArrayList jugadores = new ArrayList();
-        jugadores.add(new Buscador("Jarod", 150,100,12,"Buscador","Si"));
-        jugadores.add(new Cazadores("David", 130,80,12,"Cazador","no"));
-        jugadores.add(new Golpeadores("Juan", 120,95,12,"Golpeador","no"));
-        jugadores.add(new Cazadores("Jose", 180,99,12,"Cazador","no"));
-        jugadores.add(new Golpeadores("Diego", 140,97,12,"Golpeador","no"));
-        jugadores.add(new Cazadores("Andrea", 110,89,12,"Cazador","no"));
-        jugadores.add(new Guardian("Josue", 170,88,12,"Guardian","no"));
-        equipo.add(new Equipo("Gryffindor",0,0,jugadores));
-        //equipo 2
-        jugadores.add(new Buscador("pablo", 150,100,12,"Buscador","Si"));
-        jugadores.add(new Cazadores("pedro", 130,80,12,"Cazador","no"));
-        jugadores.add(new Golpeadores("carlos", 120,95,12,"Golpeador","no"));
-        jugadores.add(new Cazadores("miguel", 180,99,12,"Cazador","no"));
-        jugadores.add(new Golpeadores("rambo", 140,97,12,"Golpeador","no"));
-        jugadores.add(new Cazadores("chuck norris", 110,89,12,"Cazador","no"));
-        jugadores.add(new Guardian("tu crush", 170,88,12,"Guardian","no"));
-        equipo.add(new Equipo("Slytherin",0,0,jugadores));
-        
-        
+        ArrayList jugadores = new ArrayList(6);
+                ArrayList jugadores2 = new ArrayList(6);
+        ArrayList jugadores3 = new ArrayList(6);
+        ArrayList jugadores4 = new ArrayList(6);
+
+//        jugadores.add(new Buscador("Jarod", 150, 100, 12, "Buscador", "Si"));
+//        jugadores.add(new Cazadores("David", 130, 80, 12, "Cazador", "no"));
+//        jugadores.add(new Golpeadores("Juan", 120, 95, 12, "Golpeador", "no"));
+//        jugadores.add(new Cazadores("Jose", 180, 99, 12, "Cazador", "no"));
+//        jugadores.add(new Golpeadores("Diego", 140, 97, 12, "Golpeador", "no"));
+//        jugadores.add(new Cazadores("Andrea", 110, 89, 12, "Cazador", "no"));
+//        jugadores.add(new Guardian("Josue", 170, 88, 12, "Guardian", "no"));
+//        equipo.add(new Equipo("Gryffindor", 0, 0, jugadores));
+//        //equipo 2
+//        jugadores2.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
+//        jugadores2.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
+//        jugadores2.add(new Golpeadores("carlos", 120, 95, 12, "Golpeador", "no"));
+//        jugadores2.add(new Cazadores("miguel", 180, 99, 12, "Cazador", "no"));
+//        jugadores2.add(new Golpeadores("rambo", 140, 97, 12, "Golpeador", "no"));
+//        jugadores2.add(new Cazadores("chuck norris", 110, 89, 12, "Cazador", "no"));
+//        jugadores2.add(new Guardian("tu crush", 170, 88, 12, "Guardian", "no"));
+//        equipo.add(new Equipo("Slytherin", 0, 0, jugadores2));
+
         
         System.out.println("Bienvenido al programa juegos de Hogwarts");
         System.out.println("");
@@ -58,7 +61,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     try {
                         opc = sc.nextInt();
                     } catch (Exception e) {
-                        System.out.println("Error el calor es nulo");
+                        System.out.println("Error el valor es nulo");
                     }
 
                     while (sbtr == true) {
@@ -70,7 +73,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 try {
                                     opc = sc.nextInt();
                                 } catch (Exception e) {
-                                    System.out.println("Error el calor es nulo");
+                                    System.out.println("Error el valor es nulo");
                                 }
                                 String casa = " ";
                                 tr = true;
@@ -82,14 +85,14 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                             try {
                                                 opc = sc.nextInt();
                                             } catch (Exception e) {
-                                                System.out.println("Error el calor es nulo");
+                                                System.out.println("Error el valor es nulo");
                                             }
                                             String no;
                                             double pe,
                                              mu,
                                              ref;
                                             String pos = "",
-                                            cap = "no";
+                                             cap = "no";
                                             int c = 0,
                                              g = 0,
                                              go = 0,
@@ -709,24 +712,25 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 for (int i = 0; i < equipo.size(); i++) {
                                     System.out.println(equipo.get(i));
                                 }
-                                sbtr=false;
+                                sbtr = false;
                                 break;
                             default:
-                                throw new AssertionError();
+                                System.out.println("Opcion no valida");
+                                sbtr = false;
                         }
 
                     }
                     sbtr = true;
-                    tr = true;
+                    
                     break;
                 case 2:
                     System.out.println("1. modificar jugador");
                     System.out.println("2. eliminar jugador");
                     System.out.println("3. listar jugador");
                     System.out.println("4. cancelar");
-                    try{
-                    opc = sc.nextInt();
-                    }catch (Exception e){
+                    try {
+                        opc = sc.nextInt();
+                    } catch (Exception e) {
                         System.out.println("Error el Valor es nulo");
                     }
                     while (sbtr == true) {
@@ -738,7 +742,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 for (int i = 0; i < jugadores.size(); i++) {
                                     System.out.println(jugadores.get(i));
                                 }
-                                sbtr=false;
+                                sbtr = false;
                                 break;
                             case 4:
                                 break;
