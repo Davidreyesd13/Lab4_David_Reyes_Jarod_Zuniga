@@ -10,6 +10,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
     static Random rn = new Random();
 
     public static void main(String[] args) {
+        
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList();
         System.out.println("Bienvenido al programa juegos de Hogwarts");
