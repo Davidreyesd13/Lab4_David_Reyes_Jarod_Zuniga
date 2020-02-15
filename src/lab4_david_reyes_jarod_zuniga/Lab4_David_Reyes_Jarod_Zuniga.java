@@ -10,9 +10,30 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
     static Random rn = new Random();
 
     public static void main(String[] args) {
-        
+        int opc = 0;
+        //equipo 1
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList();
+        jugadores.add(new Buscador("Jarod", 150,100,12,"Buscador","Si"));
+        jugadores.add(new Cazadores("David", 130,80,12,"Cazador","no"));
+        jugadores.add(new Golpeadores("Juan", 120,95,12,"Golpeador","no"));
+        jugadores.add(new Cazadores("Jose", 180,99,12,"Cazador","no"));
+        jugadores.add(new Golpeadores("Diego", 140,97,12,"Golpeador","no"));
+        jugadores.add(new Cazadores("Andrea", 110,89,12,"Cazador","no"));
+        jugadores.add(new Guardian("Josue", 170,88,12,"Guardian","no"));
+        equipo.add(new Equipo("Gryffindor",0,0,jugadores));
+        //equipo 2
+        jugadores.add(new Buscador("pablo", 150,100,12,"Buscador","Si"));
+        jugadores.add(new Cazadores("pedro", 130,80,12,"Cazador","no"));
+        jugadores.add(new Golpeadores("carlos", 120,95,12,"Golpeador","no"));
+        jugadores.add(new Cazadores("miguel", 180,99,12,"Cazador","no"));
+        jugadores.add(new Golpeadores("rambo", 140,97,12,"Golpeador","no"));
+        jugadores.add(new Cazadores("chuck norris", 110,89,12,"Cazador","no"));
+        jugadores.add(new Guardian("tu crush", 170,88,12,"Guardian","no"));
+        equipo.add(new Equipo("Slytherin",0,0,jugadores));
+        
+        
+        
         System.out.println("Bienvenido al programa juegos de Hogwarts");
         System.out.println("");
         System.out.println("|-------------------------*MENU*--------------------------|");
@@ -20,7 +41,11 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                 + "\n|2.CRUD Jugadores                                         |"
                 + "\n|3.Simulación del Juego                                   |");
         System.out.println("|---------------------------------------------------------|");
-        int opc = sc.nextInt();
+        try {
+            opc = sc.nextInt();
+        } catch (Exception e) {
+            System.out.println("Error capa ocho valor nulo");
+        }
         boolean tr = true, sbtr = true;
         while (tr == true) {
             switch (opc) {
@@ -30,7 +55,11 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     System.out.println("3. eliminar equipos");
                     System.out.println("4. listar equipos");
                     System.out.println("5. cancelar");
-                    opc = sc.nextInt();
+                    try {
+                        opc = sc.nextInt();
+                    } catch (Exception e) {
+                        System.out.println("Error el calor es nulo");
+                    }
 
                     while (sbtr == true) {
                         switch (opc) {
@@ -38,7 +67,11 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 char resp;
                                 System.out.println("1.Gryffindor\n2.Slytherin\n3.Ravenclaw\n4.Hufflepuff");
                                 System.out.println("Ingrese la opcion a de la casa a la que desea agregar el equipo");
-                                opc = sc.nextInt();
+                                try {
+                                    opc = sc.nextInt();
+                                } catch (Exception e) {
+                                    System.out.println("Error el calor es nulo");
+                                }
                                 String casa = " ";
                                 tr = true;
                                 while (tr) {
@@ -46,19 +79,23 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                         case 1:
                                             casa = "Gryffindor";
                                             System.out.println("1.Golpeador \n2.Cazadores\n3.Guardian\n4.Buscadores ");
-                                            opc = sc.nextInt();
+                                            try {
+                                                opc = sc.nextInt();
+                                            } catch (Exception e) {
+                                                System.out.println("Error el calor es nulo");
+                                            }
                                             String no;
                                             double pe,
                                              mu,
                                              ref;
                                             String pos = "",
-                                             cap = "";
+                                            cap = "no";
                                             int c = 0,
                                              g = 0,
                                              go = 0,
                                              ca = 0,
                                              b = 0;
-                                            
+
                                             sbtr = true;
                                             while (sbtr == true) {
                                                 switch (opc) {
@@ -83,7 +120,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -110,12 +147,12 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -138,21 +175,17 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             System.out.println("Ingrese los reflejos de los jugadores");
                                                             ref = sc.nextDouble();
                                                             pos = "Guardian";
-                                                            boolean z=true;
-                                                            while(z==true){
-                                                            try{
-                                                            if(c != 1) {
+                                                            if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                if (resp == 's' && resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                while (resp != 's' && resp != 'n') {
+                                                                    System.out.println("desea que sea capitan? s/n");
+                                                                    resp = sc.next().charAt(0);
+                                                                }
+                                                                if (resp == 's' || resp == 'S') {
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
-                                                                z=false;
-                                                            }}catch(Exception e){
-                                                                System.out.println("Error capa ocho valor ingresado nulo");
-                                                                z=false;
-                                                            }
                                                             }
                                                             jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
                                                             sbtr = false;
@@ -181,7 +214,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -208,7 +241,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                             mu = 0;
                                             ref = 0;
                                             pos = "";
-                                            cap = "";
+                                            cap = "no";
                                             c = 0;
                                             g = 0;
                                             go = 0;
@@ -238,7 +271,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -269,7 +302,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -300,7 +333,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -331,7 +364,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -359,7 +392,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                             mu = 0;
                                             ref = 0;
                                             pos = "";
-                                            cap = "";
+                                            cap = "no";
                                             c = 0;
                                             g = 0;
                                             go = 0;
@@ -389,7 +422,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -420,7 +453,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -451,7 +484,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -482,7 +515,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -509,7 +542,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                             mu = 0;
                                             ref = 0;
                                             pos = "";
-                                            cap = "";
+                                            cap = "no";
                                             c = 0;
                                             g = 0;
                                             go = 0;
@@ -539,7 +572,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -570,7 +603,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -601,7 +634,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -632,7 +665,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                                     resp = sc.next().charAt(0);
                                                                 }
                                                                 if (resp == 's' || resp == 'S') {
-                                                                    cap = "Capitan";
+                                                                    cap = "Si";
                                                                     c = 1;
                                                                 }
                                                             }
@@ -665,38 +698,47 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 }
                                 System.out.println("Ingrese el equipo que desea eliminar");
                                 int el = sc.nextInt();
-                                try{
-                                equipo.remove(el - 1);
-                                }catch (Exception e){
+                                try {
+                                    equipo.remove(el - 1);
+                                } catch (Exception e) {
                                     System.out.println("Esta fuera del tamaño");
                                 }
-                                        
-                                tr = false;
+                                System.out.println("Equipo eliminado exitosamente");
                                 break;
                             case 4:
                                 for (int i = 0; i < equipo.size(); i++) {
                                     System.out.println(equipo.get(i));
                                 }
+                                sbtr=false;
+                                break;
                             default:
                                 throw new AssertionError();
                         }
 
                     }
-                    sbtr=true;
-                    tr=true;
+                    sbtr = true;
+                    tr = true;
                     break;
                 case 2:
                     System.out.println("1. modificar jugador");
                     System.out.println("2. eliminar jugador");
                     System.out.println("3. listar jugador");
                     System.out.println("4. cancelar");
+                    try{
                     opc = sc.nextInt();
+                    }catch (Exception e){
+                        System.out.println("Error el Valor es nulo");
+                    }
                     while (sbtr == true) {
                         switch (opc) {
                             case 1:
 
                                 break;
                             case 3:
+                                for (int i = 0; i < jugadores.size(); i++) {
+                                    System.out.println(jugadores.get(i));
+                                }
+                                sbtr=false;
                                 break;
                             case 4:
                                 break;
@@ -714,10 +756,10 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     break;
 
                 default:
-                    throw new AssertionError();
+                    tr = false;
             }
-            
+
         }
     }
-    
+
 }

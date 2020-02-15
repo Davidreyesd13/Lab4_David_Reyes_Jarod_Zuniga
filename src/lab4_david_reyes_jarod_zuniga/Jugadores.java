@@ -57,7 +57,9 @@ public abstract class Jugadores {
 
     @Override
     public String toString() {
-        return "Jugadores{" + "peso=" + peso + ", musculatura=" + musculatura + ", reflejos=" + reflejos + ", pos=" + pos + '}';
+        return "Jugadores{" + "nombre=" + nombre + ", peso=" + peso + ", musculatura=" + musculatura + ", reflejos=" + reflejos + ", pos=" + pos + ", capitan=" + capitan + '}';
     }
+
+  
 
 }
