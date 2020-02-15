@@ -5,10 +5,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Lab4_David_Reyes_Jarod_Zuniga {
-    
+
     static Scanner sc = new Scanner(System.in);
     static Random rn = new Random();
-    
+
     public static void main(String[] args) {
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList();
@@ -30,6 +30,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     System.out.println("4. listar equipos");
                     System.out.println("5. cancelar");
                     opc = sc.nextInt();
+
                     while (sbtr == true) {
                         switch (opc) {
                             case 1:
@@ -56,6 +57,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                              go = 0,
                                              ca = 0,
                                              b = 0;
+                                            
                                             sbtr = true;
                                             while (sbtr == true) {
                                                 switch (opc) {
@@ -75,7 +77,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -91,6 +93,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             System.out.println("");
                                                         }
                                                         break;
+
                                                     case 2:
                                                         if (ca < 3) {
                                                             System.out.println("Ingrese el nombre del jugador");
@@ -134,17 +137,21 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             System.out.println("Ingrese los reflejos de los jugadores");
                                                             ref = sc.nextDouble();
                                                             pos = "Guardian";
-                                                            if (c != 1) {
+                                                            boolean z=true;
+                                                            while(z==true){
+                                                            try{
+                                                            if(c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
-                                                                    System.out.println("desea que sea capitan? s/n");
-                                                                    resp = sc.next().charAt(0);
-                                                                }
-                                                                if (resp == 's' || resp == 'S') {
+                                                                if (resp == 's' && resp == 'S') {
                                                                     cap = "Capitan";
                                                                     c = 1;
                                                                 }
+                                                                z=false;
+                                                            }}catch(Exception e){
+                                                                System.out.println("Error capa ocho valor ingresado nulo");
+                                                                z=false;
+                                                            }
                                                             }
                                                             jugadores.add(new Cazadores(no, pe, mu, ref, pos, cap));
                                                             sbtr = false;
@@ -168,7 +175,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -183,7 +190,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("YA existe un buscador");
                                                         }
-                                                        
+
                                                         break;
                                                     default:
                                                         System.out.println("opcion ingresada es incorrecta");
@@ -225,7 +232,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -256,7 +263,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -287,7 +294,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -318,7 +325,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -333,7 +340,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("YA existe un buscador");
                                                         }
-                                                        
+
                                                         break;
                                                     default:
                                                         System.out.println("opcion ingresada es incorrecta");
@@ -376,7 +383,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -407,7 +414,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -438,7 +445,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -469,7 +476,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -484,7 +491,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("YA existe un buscador");
                                                         }
-                                                        
+
                                                         break;
                                                     default:
                                                         System.out.println("opcion ingresada es incorrecta");
@@ -526,7 +533,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -557,7 +564,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -588,7 +595,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -619,7 +626,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                             if (c != 1) {
                                                                 System.out.println("desea que sea capitan? s/n");
                                                                 resp = sc.next().charAt(0);
-                                                                while (resp != 's' || resp != 'n') {
+                                                                while (resp != 's' && resp != 'n') {
                                                                     System.out.println("desea que sea capitan? s/n");
                                                                     resp = sc.next().charAt(0);
                                                                 }
@@ -634,7 +641,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                                         } else {
                                                             System.out.println("YA existe un buscador");
                                                         }
-                                                        
+
                                                         break;
                                                     default:
                                                         System.out.println("opcion ingresada es incorrecta");
@@ -649,18 +656,34 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 equipo.add(new Equipo(casa, 0, 0, jugadores));
                                 break;
                             case 2:
-                                
+
                                 break;
                             case 3:
-                                
+                                for (int i = 0; i < equipo.size(); i++) {
+                                    System.out.println(equipo.get(i));
+                                }
+                                System.out.println("Ingrese el equipo que desea eliminar");
+                                int el = sc.nextInt();
+                                try{
+                                equipo.remove(el - 1);
+                                }catch (Exception e){
+                                    System.out.println("Esta fuera del tamaño");
+                                }
+                                        
                                 tr = false;
                                 break;
+                            case 4:
+                                for (int i = 0; i < equipo.size(); i++) {
+                                    System.out.println(equipo.get(i));
+                                }
                             default:
                                 throw new AssertionError();
                         }
-                        
+
                     }
-                
+                    sbtr=true;
+                    tr=true;
+                    break;
                 case 2:
                     System.out.println("1. modificar jugador");
                     System.out.println("2. eliminar jugador");
@@ -670,7 +693,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                     while (sbtr == true) {
                         switch (opc) {
                             case 1:
-                                
+
                                 break;
                             case 3:
                                 break;
@@ -684,21 +707,16 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                 System.out.println("Opcion ingresada incorrecta");
                         }
                     }
-                    tr = false;
                     break;
                 case 3:
-                    for (int i = 0; i < equipo.size(); i++) {
-                        System.out.println(equipo.get(i));
-                    }
-                    System.out.println("Ingrese el equipo que desea eliminar");
-                    int el=sc.nextInt();
-                    equipo.remove(el-1);
+
                     break;
-                
+
                 default:
                     throw new AssertionError();
             }
             
         }
     }
+    
 }
