@@ -14,31 +14,33 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
         //equipo 1
         ArrayList equipo = new ArrayList();
         ArrayList jugadores = new ArrayList(6);
-                ArrayList jugadores2 = new ArrayList(6);
+        ArrayList jugadores2 = new ArrayList(6);
         ArrayList jugadores3 = new ArrayList(6);
         ArrayList jugadores4 = new ArrayList(6);
 
-//        jugadores.add(new Buscador("Jarod", 150, 100, 12, "Buscador", "Si"));
-//        jugadores.add(new Cazadores("David", 130, 80, 12, "Cazador", "no"));
-//        jugadores.add(new Golpeadores("Juan", 120, 95, 12, "Golpeador", "no"));
-//        jugadores.add(new Cazadores("Jose", 180, 99, 12, "Cazador", "no"));
-//        jugadores.add(new Golpeadores("Diego", 140, 97, 12, "Golpeador", "no"));
-//        jugadores.add(new Cazadores("Andrea", 110, 89, 12, "Cazador", "no"));
-//        jugadores.add(new Guardian("Josue", 170, 88, 12, "Guardian", "no"));
-//        equipo.add(new Equipo("Gryffindor", 0, 0, jugadores));
-//        //equipo 2
-//        jugadores2.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
-//        jugadores2.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
-//        jugadores2.add(new Golpeadores("carlos", 120, 95, 12, "Golpeador", "no"));
-//        jugadores2.add(new Cazadores("miguel", 180, 99, 12, "Cazador", "no"));
-//        jugadores2.add(new Golpeadores("rambo", 140, 97, 12, "Golpeador", "no"));
-//        jugadores2.add(new Cazadores("chuck norris", 110, 89, 12, "Cazador", "no"));
-//        jugadores2.add(new Guardian("tu crush", 170, 88, 12, "Guardian", "no"));
-//        equipo.add(new Equipo("Slytherin", 0, 0, jugadores2));
+        jugadores.add(new Buscador("Jarod", 150, 100, 12, "Buscador", "Si"));
+        jugadores.add(new Cazadores("David", 130, 80, 12, "Cazador", "no"));
+        jugadores.add(new Golpeadores("Juan", 120, 95, 12, "Golpeador", "no"));
+        jugadores.add(new Cazadores("Jose", 180, 99, 12, "Cazador", "no"));
+        jugadores.add(new Golpeadores("Diego", 140, 97, 12, "Golpeador", "no"));
+        jugadores.add(new Cazadores("Andrea", 110, 89, 12, "Cazador", "no"));
+        jugadores.add(new Guardian("Josue", 170, 88, 12, "Guardian", "no"));
+        equipo.add(new Equipo("Gryffindor", 0, 0, jugadores));
+        //equipo 2
+        jugadores2.add(new Buscador("pablo", 150, 100, 12, "Buscador", "Si"));
+        jugadores2.add(new Cazadores("pedro", 130, 80, 12, "Cazador", "no"));
+        jugadores2.add(new Golpeadores("carlos", 120, 95, 12, "Golpeador", "no"));
+        jugadores2.add(new Cazadores("miguel", 180, 99, 12, "Cazador", "no"));
+        jugadores2.add(new Golpeadores("rambo", 140, 97, 12, "Golpeador", "no"));
+        jugadores2.add(new Cazadores("chuck norris", 110, 89, 12, "Cazador", "no"));
+        jugadores2.add(new Guardian("tu crush", 170, 88, 12, "Guardian", "no"));
+        equipo.add(new Equipo("Slytherin", 0, 0, jugadores2));
 
         
         System.out.println("Bienvenido al programa juegos de Hogwarts");
         System.out.println("");
+        boolean tr = true, sbtr = true;
+        while (tr == true) {
         System.out.println("|-------------------------*MENU*--------------------------|");
         System.out.println("|1.CRUD Equipo                                            |"
                 + "\n|2.CRUD Jugadores                                         |"
@@ -49,10 +51,10 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
         } catch (Exception e) {
             System.out.println("Error capa ocho valor nulo");
         }
-        boolean tr = true, sbtr = true;
-        while (tr == true) {
+        
             switch (opc) {
                 case 1:
+                    while (sbtr == true) {
                     System.out.println("1. agregar equipos");
                     System.out.println("2. modificar equipos");
                     System.out.println("3. eliminar equipos");
@@ -64,7 +66,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                         System.out.println("Error el valor es nulo");
                     }
 
-                    while (sbtr == true) {
+                    
                         switch (opc) {
                             case 1:
                                 char resp;
@@ -713,6 +715,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                                     System.out.println(equipo.get(i));
                                 }
                                 sbtr = false;
+                                tr=true;
                                 break;
                             default:
                                 System.out.println("Opcion no valida");
@@ -721,7 +724,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
 
                     }
                     sbtr = true;
-                    
+                    tr=true;
                     break;
                 case 2:
                     System.out.println("1. modificar jugador");
@@ -762,7 +765,7 @@ public class Lab4_David_Reyes_Jarod_Zuniga {
                 default:
                     tr = false;
             }
-
+            tr=true;
         }
     }
 
